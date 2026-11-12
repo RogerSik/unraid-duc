@@ -3,7 +3,7 @@
 <!ENTITY name      "duc">
 <!ENTITY package   "unraid-duc">
 <!ENTITY author    "RogerSik">
-<!ENTITY version   "2026.11.12a">
+<!ENTITY version   "2026.11.12.1">
 <!ENTITY repo      "RogerSik/unraid-duc">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&repo;/release/plugin/duc.plg">
 <!ENTITY txz       "&package;-&version;-x86_64-1.txz">
@@ -23,31 +23,32 @@
 
 <CHANGES>
 <![CDATA[
-### 2026.11.12a
+### 2026.11.12.1
 
-- History chart shows decimals (29.22T instead of 29T) and the change from the previous snapshot in the tooltip
+- History chart date labels were cut off
+- Size history is off by default (turn on under Settings > Keep size history)
 ]]>
 </CHANGES>
 
 <FILE Name="&plgdir;/&txz;">
 <URL>https://github.com/&repo;/releases/download/&version;/&txz;</URL>
-<SHA256>48e498dba66314e663317ce8696bd9eaa64b7a87c7f0649c2cdfaa98c58c05cb</SHA256>
+<SHA256>5b7978ff3f53509ea17a254fea6ded76ec13af8fd71f812b6b562d934d523c27</SHA256>
 </FILE>
 
 <!-- install -->
 <FILE Run="/bin/bash">
 <INLINE>
 <![CDATA[
-upgradepkg --install-new /boot/config/plugins/duc/unraid-duc-2026.11.12a-x86_64-1.txz
+upgradepkg --install-new /boot/config/plugins/duc/unraid-duc-2026.11.12.1-x86_64-1.txz
 
 # remove packages from previous versions
-find /boot/config/plugins/duc -maxdepth 1 -name 'unraid-duc-*.txz' ! -name 'unraid-duc-2026.11.12a-x86_64-1.txz' -delete
+find /boot/config/plugins/duc -maxdepth 1 -name 'unraid-duc-*.txz' ! -name 'unraid-duc-2026.11.12.1-x86_64-1.txz' -delete
 
 /usr/local/emhttp/plugins/duc/scripts/apply-settings
 
 echo ""
 echo "----------------------------------------------------"
-echo " Disk Usage (duc) 2026.11.12a has been installed."
+echo " Disk Usage (duc) 2026.11.12.1 has been installed."
 echo " Open Settings > User Utilities > Disk Usage."
 echo "----------------------------------------------------"
 echo ""
