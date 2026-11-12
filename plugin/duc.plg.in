@@ -5,7 +5,7 @@
 <!ENTITY author    "@AUTHOR@">
 <!ENTITY version   "@VERSION@">
 <!ENTITY repo      "@REPO@">
-<!ENTITY pluginURL "https://raw.githubusercontent.com/&repo;/main/plugin/duc.plg">
+<!ENTITY pluginURL "https://raw.githubusercontent.com/&repo;/release/plugin/duc.plg">
 <!ENTITY txz       "&package;-&version;-x86_64-1.txz">
 <!ENTITY plgdir    "/boot/config/plugins/&name;">
 ]>
